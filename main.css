@@ -1,0 +1,127 @@
+html{
+    -webkit-tap-highlight-color: rbga(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    overflow-y: hidden;
+    font-size: 10px;
+    display: block;
+    -webkit-locale: "en";
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    font-family: 'avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    /*-webkit-backface-visibility: hidden;*/
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    /*speak: none;*/
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    min-width: 768px;
+    
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: powderblue;
+    display: block;
+    font-size: 14px;
+    margin: 0px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+h1{
+    color: #000000;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.switcher{
+    display: flex;
+    flex: 0 0 3.25%;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-right: 1px solid transparent;
+    background: #181f27;
+    padding: 0px;
+    height: 100%;
+    position: relative;
+}
+
+.miniSlidebar{
+    flex: 0 0 14.5%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    list-style: none;
+    background: #27313e;
+    padding: 0px;
+    min-width: 115px;
+    height: 100%;
+    position: relative;
+    transition-property: flex, width, min-width, margin-left;
+    transition-duration: 0.15s, 0.15s, 0.15s, 0.2s;
+    transition-timing-function: ease-out, ease-out, ease-out, ease-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+}
+
+.slidebarAgenda{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.slidebarCalendar{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.slidebarQuickAccess{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    max-height: 100%;
+}
+
+.tasks-wrapper{
+    flex: 1 1 54%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: #f2f6fa;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 400px;
+    position: relative;
+    min-height: 0;
+}
+
+.calendar{
+    flex: 1 1 28.25%;
+    display: flex;
+    flex-shrink: 0;
+    max-width: 28.25%;
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: 1px solid #eeeeee;
+}
