@@ -96,10 +96,10 @@ app{
     margin: 5px;
     height: 7%;
     width: 100%;
-    padding-left: 7px;
+    padding-left: 20%;
 }
 .contain-switcher-item{
-    padding: 15%;
+    padding: 0;
     margin-left: 0;
     float: left;
     position: relative;
