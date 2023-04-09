@@ -1,0 +1,253 @@
+/* Sideboard---------------------- */
+
+div.sideboard {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #202442;
+}
+
+div.sideboard div.field {
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
+
+    margin: 20px auto 10px auto;
+    padding: 0px 0px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+div.control {
+    flex: 1 35px;
+
+    margin-top: 30px !important;
+
+    flex-direction: row;
+    align-items: center;
+}
+
+div.account {
+    flex: 2 100px;
+
+    margin-top: 50px !important;
+    margin-bottom: 35px !important;
+
+    flex-direction: row;
+    align-items: center;
+}
+
+div.calendar {
+    flex: 6 400px;
+
+    flex-direction: column;
+    align-items: left;
+}
+
+div.remind {
+    flex: 4 300px;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Field control */
+
+div.mode {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+div.logout {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+label.switch {
+    margin-right: 15px;
+}
+
+div.logout img {
+    height: 30px;
+    width: 30px;
+}
+
+div.photo {
+    flex: 3;
+    height: 100%;
+    width: 100%;
+}
+
+div.name {
+    flex: 9;
+    height: 100%;
+    width: calc(100% - 15px);
+
+    margin-left: 15px;
+}
+
+div.extend {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+div.photo div {
+    height: 100px;
+    width: 100px;
+
+    border-radius: 50%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+div.photo div img {
+    width: 200px;
+    height: 180px;
+
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+}
+
+div.name h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.name p {
+    margin-top: 5px;
+
+    font-size: calc(90%);
+}
+
+div.extend img {
+    height: 50px;
+    width: 30px;
+
+    padding: 0px;
+}
+
+div.calendar h4 {
+    font-size: 25px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+div.calendarbox {
+    flex: 1;
+    height: 100%;
+    width: calc(100% - 10px); 
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+}
+
+div.remind>div {
+    margin-bottom: 30px;
+}
+
+div.note {
+    flex: 1;
+    height: 100%;
+    width: calc(100% - 40px);
+
+    padding: 10px 20px 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border-radius: 10px;
+    background-color: #2E325A;
+}
+
+div.note h3, p {
+    margin: 0px;
+}
+
+div.note p {
+    font-size: 14px;
+}
+
+div.note>div {
+    margin-bottom: 10px;
+}
+
+div.title {
+    width: calc(100%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.title p {
+    width: 75px;
+    border-radius: 5px;
+
+    font-weight: bold;
+    text-align: center;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5792fb+20,47a4fe+46,27b9fe+72 */
+    background: #5792fb; /* Old browsers */
+    background: -moz-linear-gradient(left,  #5792fb 20%, #47a4fe 46%, #27b9fe 72%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #5792fb 20%,#47a4fe 46%,#27b9fe 72%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #5792fb 20%,#47a4fe 46%,#27b9fe 72%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5792fb', endColorstr='#27b9fe',GradientType=1 ); /* IE6-9 */
+}
+
+div.time {
+    width: calc(100% - 20px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.time img {
+    height: 20px;
+    width: 20px;
+
+    margin-right: 10px;
+}
+
+div.alarm {
+    width: calc(100% - 20px);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+div.alarm label.switch {
+    margin-left: 0px;
+}

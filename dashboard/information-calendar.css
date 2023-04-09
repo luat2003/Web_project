@@ -1,0 +1,67 @@
+/* Mainpage----------------------- */
+
+div.information {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+div.information div.calendar {
+    flex: 7;
+    
+    height: 100%;
+    width: 100%;
+}
+
+div.input-task {
+    flex: 3;
+
+    height: 100%;
+    width: calc(100% - 60px);
+
+    margin: 30px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+div.input {
+    flex: 1;
+
+    height: 100%;
+    width: 100%;
+}
+
+div.writedown {
+    flex: 1;
+
+    height: 100%;
+    width: 100%;
+
+    margin-left: 30px;
+    padding: 20px;
+
+    background-color: #2E325A;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.writedown div {
+    flex: 1;
+}
+
+div.writedown h2 {
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+div.writedown p {
+    margin-left: 10px;
+
+    color: #666;
+}

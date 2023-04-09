@@ -1,0 +1,486 @@
+/* Mainpage----------------------- */
+
+div.information {
+    display: flex;
+    flex-direction: column;
+}
+
+div.information div.field {
+    height: calc(100% - 20px);
+    width: calc(100% - 60px);
+
+    margin: 10px auto 10px auto;
+    padding: 0px 0px 0px 0px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.field1 {
+    flex: 1 35px;
+
+    margin-top: 30px !important;
+}
+
+div.field2 {
+    flex: 4 200px;
+}
+
+div.field3 {
+    flex: 4 150px;
+}
+
+div.field4 {
+    flex: 6 400px;
+
+    margin-bottom: 30px !important;
+}
+
+/* field 1 ---------------------- */
+
+div.search {
+    flex: 3;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+div.settings {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+div.search form {
+    height: 100%;
+    width: calc(100% - 15px);
+
+    margin-right: 15px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+}
+
+div.searchbox {
+    height: 100%;
+    width: calc(100% - 60px);
+
+    margin: 0px auto 0px auto;
+
+    display: flex;
+    align-items: center;
+
+    outline: none;
+    border: none;
+}
+
+div.search form img {
+    height: auto;
+    width: auto;
+
+    margin-right: 30px;
+}
+
+div.search form input[type="text"] {
+    height: calc(100% - 10%);
+    width: calc(100%);
+
+    outline: none;
+    border: none;
+    background-color: #2E325A;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+div.settings img {
+    height: 30px;
+    width: 30px
+}
+
+div.settings a img.alarm {
+    margin-right: 30px;
+}
+
+/* field 2 ----------------------- */
+
+div.welcome {
+    flex: 3;
+    height: calc(100% - 10%);
+    width: 100%;
+
+    margin: auto 0px auto auto;
+
+    display: flex;
+    align-items: center;
+}
+
+div.welcomebox {
+    height: 100%;
+    width: calc(100% - 15px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+}
+
+div.datetime {
+    flex: 1;
+    height: calc(100% - 10%);
+    width: 100%;
+
+    margin: auto 0px auto 0px;
+
+    display: flex;
+    align-items: center;
+}
+
+div.datebox {
+    height: 100%;
+    width: calc(100% - 15px);
+
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+}
+
+div.welcomebox div.text {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.welcomebox div.picture {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.text div.hello {
+    flex: 1;
+    height: 100%;
+    width: calc(100% - 30px);
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+div.text div.describe {
+    flex: 1;
+    height: 100%;
+    width: calc(100% - 30px);
+
+    margin-left: auto;
+
+    display: flex;
+    justify-content: left;
+}
+
+div.hello h2 {
+    margin: 0px;
+
+    color: #0088ff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.describe p {
+    margin: 0px;
+    font-size: 15px;
+}
+
+div.picture img {
+    height: 200px;
+    width: 200px;
+
+    position: relative;
+}
+
+div.datebox p {
+    margin: 0px;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.datebox h3 {
+    margin: 0px;
+
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* field 3 ------------------------ */
+
+div.field3 div.count:last-child {
+    margin-right: 0px;
+}
+
+div.count {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    margin-right: 30px;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+}
+
+div.data {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.part {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    padding-left: 30px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+div.total h1 {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #25bfff; /* Old browsers */
+    color: -moz-linear-gradient(-45deg,  #25bfff 0%, #33a6ff 35%, #3f91ff 65%, #4b84ff 100%); /* FF3.6-15 */
+    color: -webkit-linear-gradient(-45deg,  #25bfff 0%,#33a6ff 35%,#3f91ff 65%,#4b84ff 100%); /* Chrome10-25,Safari5.1-6 */
+    color: linear-gradient(135deg,  #25bfff 0%,#33a6ff 35%,#3f91ff 65%,#4b84ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25bfff', endColorstr='#4b84ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.skill {
+    height: 120px;
+    width: 120px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    position: relative;
+}
+
+.outer {
+    height: 120px;
+    width: 120px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #25294A;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15);
+}
+
+.inner {
+    height: 80px;
+    width: 80px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2E325A;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+
+#number {
+    font-weight: 600;
+    color: #555;
+}
+
+div.inprogress circle  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    animation: inprogress 2s linear forwards;
+}
+
+div.completed circle  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    animation: completed 2s linear forwards;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+@keyframes inprogress {
+    100%{
+        stroke-dashoffset: 78.5;
+    }
+}
+
+@keyframes completed {
+    100%{
+        stroke-dashoffset: 266.9;
+    }
+}
+
+/* field 4 ------------------------- */
+
+div.today_task {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+}
+
+div.analysis {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+}
+
+div.today_taskbox {
+    height: calc(100% - 10px);
+    width: calc(100% - 15px);
+
+    margin-top: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.analysisbox {
+    height: calc(100% - 10px);
+    width: calc(100% - 15px);
+
+    margin-top: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.field4 h4 {
+    font-size: 25px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+div.today_taskbox h5 {
+    font-size: 20px;
+}
+
+div.today_taskbox p {
+    font-size: 15px;
+}
+
+div.today_taskbox h5 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+div.task {
+    flex: 1;
+    height: calc(100% - 30px);
+    width: calc(100% - 60px);
+
+    margin-bottom: 30px;
+    padding: 0px 30px 0px 30px;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+}
+
+div.task:last-child {
+    margin-bottom: 0px;
+}
+
+div.graphbox {
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+
+    padding: 15px;
+
+    border-radius: 5px;
+    background-color: #2E325A;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.graphbox img {
+    position: absolute;
+
+    height: 360px;
+    width: 450px;
+}

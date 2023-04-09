@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link href="https://super.so/icon/light/check-circle.svg" rel="icon" type="image/x-icon">
+        <title>planner | calendar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <!--<meta http-equiv="refresh" content="30">-->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" corssorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+        <link href="calendarpage.css" rel="stylesheet">
+        <link href="navigator.css" rel="stylesheet">
+        <link href="information-calendar.css" rel="stylesheet">
+        <link href="sideboard.css" rel="stylesheet">
+        <link href="switch.css" rel="stylesheet">
+        <link href="calendar_activities.css" rel="stylesheet">
+        <link href="calendar.css" rel="stylesheet">
+    </head>
+
+    <style>
+        div.shown 
+        
+        div.hidden {
+            display: none;
+        }
+    </style>
+
+    <body id="background">
+        <div class="body">
+            <div class="navigator">
+                <div class="logo">
+                    <img src="https://super.so//icon/light/slack.svg">
+                    <h2>planner</h2>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="../dashboard/dashboard.html"><img src="https://super.so/icon/light/layout.svg">Dashboard</a></li>
+                        <li><a href="#today"><img src="https://super.so/icon/light/clipboard.svg">Today's task</a></li>
+                        <li><a href="calendar.html"><img src="https://super.so/icon/light/calendar.svg">Calendar</a></li>
+                        <li><a href="#stickynotes"><img src="https://super.so/icon/light/copy.svg">Sticky Notes</a></li>
+                        <li><a href="#categories"><img src="https://super.so/icon/light/list.svg">Categories</a></li>
+                        <li><a href="#inbox"><img src="https://super.so/icon/light/plus-circle.svg">Inbox</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mainpage">
+                <div class="information">
+                    <div class="calendar">
+                        <div id="calendar"></div>
+                    </div>
+
+                    <div class="input-task">
+                        <div class="input">
+                            <div id='formDiv'>
+                                <fieldset style='padding:0 20px 20px 20px'>
+                                    <legend>
+                                    <h2> Add An Event </h2>
+                                    </legend>
+                                    <form name='myForm' onsubmit="myFunc()">
+                                    <table>
+                                        <tr>
+                                        <td>Name:</td>
+                                        <td><input type="text" name="eventName" id="eventName" required></td>
+                                        </tr>
+                                        <tr>
+                                        <td>Type:</td>
+                                        <td style="display: flex;">
+                                            <select class="selectMenu" id="eventType" name="eventType" onchange="displayCol()" required>
+                                            <option value="">Select One</option>
+                                            <option value="Event">Event</option>
+                                            <option value="Leisure">Leisure</option>
+                                            <option value="Family Time">Family Time</option>
+                                            </select>
+                                            <div id="eventColor"></div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>Date:</td>
+                                        <td><input type="date" name="eventDate" id="eventDate" required></td>
+                                        </tr>
+                                        <tr>
+                                        <td><input type="submit" id="addEventBTN" value="Add Event"></td>
+                                        <td><button id="closeBTN" onclick="closeForm()" form="noForm">Close Window</button></td>
+                                        </tr>
+                                    </table>
+                                    </form>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+                        <div class="writedown">
+                            <div class="overdue">
+                                <h2>Overdue</h2>
+                                <p>No tasks</p>
+                            </div>
+                            <div class="due-this-week">
+                                <h2>Due This Week</h2>
+                                <p>No tasks</p>
+                            </div>
+                            <div class="due-next-week">
+                                <h2>Due Next Week</h2>
+                                <p>No tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sideboard">
+                    <div class="field control">
+                        <div class="mode">
+                            <label class="switch">
+                                <input type="checkbox" id="mySwitch"></input>
+                                <div class="slider round"></div>
+                            </label>
+                            <div id="day-mode" class="hidden">Day mode</div>
+                            <div id="night-mode" class="shown">Night mode</div>
+                        </div>
+
+                        <div class="logout">
+                            <a href="#logout"><img src="https://super.so/icon/light/log-out.svg"></a>
+                        </div>
+                    </div>
+
+                    <div class="field account">
+                        <div class="photo">
+                            <div>
+                                <img src="https://th.bing.com/th/id/R.63c9adf7e5d10abd2e05412cb55449cf?rik=D6qZ9dtLipFjKA&pid=ImgRaw&r=0">
+                            </div>
+                        </div>
+
+                        <div class="name">
+                            <h3>Dr. Le Ba Luat</h3>
+                            <p>Associated Professor</p>
+                        </div>
+
+                        <div class="extend">
+                            <a href="#accountsetting"><img src="https://super.so/icon/light/more-vertical.svg"></a>
+                        </div>
+                    </div>
+
+                    <div class="field calendar">
+                        <h4>Calendar Activities</h4>
+                        <div class="calendarbox">
+                            <header>
+                                <div class="icons">
+                                    <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                    <p class="current-date"></p>
+                                    <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                </div>
+                            </header>
+
+                            <div class="calendar-date">
+                                <ul class="weeks">
+                                    <li>S</li>
+                                    <li>M</li>
+                                    <li>T</li>
+                                    <li>W</li>
+                                    <li>T</li>
+                                    <li>F</li>
+                                    <li>S</li>
+                                </ul>
+                                <ul class="days"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field remind">
+                        <div class="note">
+                            <div class="title">
+                                <h3>Meeting with clients</h3>
+                                <p class="appointment">Today</p>
+                            </div>
+                            <div class="appointment">
+                                <img src="https://super.so/icon/light/clock.svg">
+                                <p>9:00 - 10:00 am</p>
+                            </div>
+                            <div class="alarm">
+                                <label class="switch">
+                                    <input type="checkbox" id="mySwitch"></input>
+                                    <div class="slider round"></div>
+                                </label>
+                                <p>Remind me at time</p>
+                            </div>
+                        </div>
+
+                        <div class="note">
+                            <div class="title">
+                                <h3>Speech rehearsal</h3>
+                                <p class="appointment">Dec 27</p>
+                            </div>
+                            <div class="appointment">
+                                <img src="https://super.so/icon/light/clock.svg">
+                                <p>1:00 - 3:00 pm</p>
+                            </div>
+                            <div class="alarm">
+                                <label class="switch">
+                                    <input type="checkbox" id="mySwitch"></input>
+                                    <div class="slider round"></div>
+                                </label>
+                                <p>Remind me at time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="calendar.js" defer></script>
+    <script src="calendar_activities.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+    <script>
+        var colors = ["#ffffff", "#000000"];
+        var colorIndex = 0;
+        document.getElementById("mySwitch").onchange = function() {            
+            var co = document.getElementById("background");
+            if (colorIndex >= colors.length) {
+                colorIndex = 0;
+            }
+            col.style.backgroundColor = colors[colorIndex];
+            colorIndex++;
+            var nightmode = document.getElementById("daymode");
+            var daymode = document.getElementById("nightmode");
+            if (daymode.classList.contains("hidden")) {
+                daymode.className = "shown";
+                nightmode.className = "hidden";
+            } else if (nightmode.classList.contains("hidden")) {
+                nightmode.className = "shown";
+                daymode.className = "hidden";
+            }
+        }
+    </script>
+</html>
